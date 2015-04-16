@@ -96,7 +96,7 @@ function! s:_buildin_migemo(word)
 		throw "vital-migemo: migemo is not buildin."
 	endif
 	let save_migemo_dict = &migemodict
-	let &migemodict
+	let &migemodict = s:migemo_dict()
 	try
 		return migemo(a:word)
 	finally
