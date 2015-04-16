@@ -1,0 +1,40 @@
+*vital-Migemo.txt*		migemo の正規表現を生成する
+
+
+==============================================================================
+概要					*Vital.Migemo-introduction*
+
+*Vital.Migemo* は migemo の正規表現を生成するモジュールです。
+このモジュールを使用する場合、予め cmigemo をインストールしておく必要がありま
+す。
+
+- C/Migemo : http://www.kaoriya.net/software/cmigemo/
+
+
+==============================================================================
+インターフェース			*Vital.Migemo-interface*
+
+------------------------------------------------------------------------------
+関数					*Vital.Migemo-functions*
+
+search_dict([{def}])			*Vital.Migemo.search_dict()*
+	migemo の辞書ファイルを探して、見つかった場合にその辞書ファイルのパス
+	を返します。
+	辞書ファイルが見つからなかった場合、{def} を返し、{def} が渡されてなけ
+	れば空の文字列を返します。
+
+migemo_dict()				*Vital.Migemo.migemo_dict()*
+	このモジュールで使用される migemo の辞書ファイルのパスを返します。
+	基本的には |Vital.Migemo.search_dict()| の値と同じになります。
+
+reset_migemo_dict([{path}])		*Vital.Migemo.reset_migemo_dict()*
+	このモジュールで使用される migemo の辞書ファイルのパスを設定します。
+	{path} が渡されなければ |Vital.Migemo.search_dict()| の値が設定されま
+	す。
+
+generate_regexp({word})			*Vital.Migemo.generate_regexp()*
+	{word} の migemo の正規表現パターンを返します。
+
+
+==============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
