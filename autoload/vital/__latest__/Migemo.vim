@@ -46,8 +46,8 @@ endfunction
 
 function! s:search_dict(...)
   for path in [
-        \ 'migemo/'.&encoding.'/migemo-dict',
-        \ &encoding.'/migemo-dict',
+        \ 'migemo/'.&encoding.'.d/migemo-dict',
+        \ &encoding.'.d/migemo-dict',
         \ 'migemo-dict',
         \ ]
     let dict = s:_search_dict(path)
@@ -81,7 +81,6 @@ function! s:cmigemo_command(word)
 	let dict = s:migemo_dict()
 	return 'cmigemo -v -w "' . a:word . '" -d "' . dict . '"'
 endfunction
-
 
 function! s:_cmigemo(word)
 	if !executable("cmigemo")
