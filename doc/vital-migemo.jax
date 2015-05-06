@@ -32,8 +32,18 @@ reset_migemo_dict([{path}])		*Vital.Migemo.reset_migemo_dict()*
 	{path} が渡されなければ |Vital.Migemo.search_dict()| の値が設定されま
 	す。
 
+migemo_command()			*Vital.Migemo.migemo_command()*
+	実行する migemo のコマンドを返します。
+
+set_migemo_command({path})		*Vital.Migemo.set_migemo_command()*
+	使用する migemo のコマンドのパスを設定します。
+
 generate_regexp({word})			*Vital.Migemo.generate_regexp()*
 	{word} の migemo の正規表現パターンを返します。
+
+				*Vital.Migemo.generate_migemo_command()*
+generate_migemo_command({word})
+	{word} の migemo の正規表現パターンを実行するコマンドを返します。
 
 
 ==============================================================================
